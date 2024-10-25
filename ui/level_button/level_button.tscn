@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf1v21kfv5kaw"]
+
+[ext_resource type="Script" path="res://ui/level_button/level_button.gd" id="1_g8iet"]
+
+[node name="LevelButton" type="Button"]
+text = "Six"
+script = ExtResource("1_g8iet")

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://jj0eg1ukfrmg"]
+
+[ext_resource type="Texture2D" uid="uid://bwq0qaxik5xkm" path="res://assets/aseprite/crown.png" id="1_nyia6"]
+
+[node name="LevelButtonCrown" type="Sprite2D"]
+texture = ExtResource("1_nyia6")
+offset = Vector2(-1, -1)

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cv4nb8std5bfl"]
+
+[ext_resource type="Script" path="res://entities/goal/goal.gd" id="1_72dx8"]
+[ext_resource type="Texture2D" uid="uid://bugryflgk0olr" path="res://assets/aseprite/green_goal.png" id="2_edibt"]
+[ext_resource type="Texture2D" uid="uid://nnaq58galcgp" path="res://assets/aseprite/red_goal.png" id="3_wvx57"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bexpn"]
+size = Vector2(14, 14)
+
+[node name="Goal" type="Area2D"]
+script = ExtResource("1_72dx8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_bexpn")
+debug_color = Color(0.175, 0.7, 0, 0.419608)
+
+[node name="GreenSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_edibt")
+centered = false
+
+[node name="RedSprite" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_wvx57")
+centered = false

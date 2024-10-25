@@ -1,0 +1,72 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://drr70ylap357l"]
+
+[ext_resource type="FontFile" uid="uid://dyejwvue4vj4d" path="res://assets/fonts/Kenney Mini Square Mono.ttf" id="1_l8b0r"]
+[ext_resource type="FontFile" uid="uid://8l4je1qcba2" path="res://assets/fonts/Kenney Pixel Square.ttf" id="1_rj402"]
+[ext_resource type="FontFile" uid="uid://dmo4v8rrcthls" path="res://assets/fonts/Kenney Mini Square.ttf" id="2_c7mx7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_na6pp"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.32549, 0.133333, 0.141176, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kg0hw"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.345098, 0.219608, 0.223529, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[resource]
+default_font = ExtResource("1_rj402")
+default_font_size = 8
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/styles/hover = SubResource("StyleBoxFlat_na6pp")
+Button/styles/normal = SubResource("StyleBoxFlat_kg0hw")
+Button/styles/pressed = SubResource("StyleBoxFlat_kg0hw")
+RichTextLabel/fonts/mono_font = ExtResource("1_l8b0r")
+RichTextLabel/fonts/normal_font = ExtResource("2_c7mx7")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ns3elyvjhr6o"]
+
+[ext_resource type="Script" path="res://entities/wall/wall.gd" id="1_op71p"]
+[ext_resource type="Texture2D" uid="uid://d3emw14s22p1a" path="res://assets/wall.png" id="1_tla3u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8kgp"]
+size = Vector2(14, 14)
+
+[node name="Wall" type="StaticBody2D"]
+script = ExtResource("1_op71p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_x8kgp")
+debug_color = Color(0.94, 0, 0, 0.784314)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tla3u")
+centered = false

@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkakjlc5e3o62"]
+
+[ext_resource type="Script" path="res://entities/box/box.gd" id="1_bk44w"]
+[ext_resource type="Texture2D" uid="uid://h5hddfvuor3w" path="res://assets/aseprite/green_box.png" id="2_ypwry"]
+[ext_resource type="Texture2D" uid="uid://8ht35smqyxqw" path="res://assets/aseprite/red_box.png" id="3_0b5jr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxq2x"]
+size = Vector2(14, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3v571"]
+size = Vector2(14, 14)
+
+[node name="Box" type="StaticBody2D" groups=["box"]]
+script = ExtResource("1_bk44w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_gxq2x")
+debug_color = Color(0.7, 0.606667, 0, 0.419608)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_3v571")
+
+[node name="GreenSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_ypwry")
+centered = false
+
+[node name="RedSprite" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_0b5jr")
+centered = false
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(8, 8)
+target_position = Vector2(0, 16)
