@@ -4,4 +4,3 @@
 
 [node name="LevelButtonCrown" type="Sprite2D"]
 texture = ExtResource("1_nyia6")
-offset = Vector2(-1, -1)

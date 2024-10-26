@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=4 uid="uid://c0g7op76o124"]
+
+[ext_resource type="PackedScene" uid="uid://c7kia136qg64b" path="res://levels/level.tscn" id="1_e51o4"]
+[ext_resource type="PackedScene" uid="uid://cv4nb8std5bfl" path="res://entities/goal/goal.tscn" id="2_w2cyl"]
+[ext_resource type="PackedScene" uid="uid://dkakjlc5e3o62" path="res://entities/box/box.tscn" id="3_7ah0u"]
+
+[node name="Level03" instance=ExtResource("1_e51o4")]
+level_key = "03"
+
+[node name="TileMapLayer" parent="." index="0"]
+tile_map_data = PackedByteArray("AAAAAAkAAAAKABEAAAABAAkAAAAKABEAAAACAAkAAAAKABEAAAADAAkAAAAKABEAAAAEAAkAAAAKABEAAAAFAAkAAAAKABEAAAAGAAkAAAAKABEAAAAHAAkAAAAKABEAAAAIAAkAAAAKABEAAAAJAAkAAAAKABEAAAAJAAAAAAAKABEAAAAAAAAAAAAKABEAAAAAAAEAAAAKABEAAAAAAAIAAAAKABEAAAAAAAMAAAAKABEAAAAAAAQAAAAKABEAAAAAAAUAAAAKABEAAAAAAAYAAAAKABEAAAAAAAcAAAAKABEAAAAAAAgAAAAKABEAAAABAAAAAAAKABEAAAACAAAAAAAKABEAAAADAAAAAAAKABEAAAAEAAAAAAAKABEAAAAFAAAAAAAKABEAAAAGAAAAAAAKABEAAAAHAAAAAAAKABEAAAAIAAAAAAAKABEAAAAJAAEAAAAKABEAAAAJAAIAAAAKABEAAAAJAAMAAAAKABEAAAAJAAQAAAAKABEAAAAJAAUAAAAKABEAAAAJAAYAAAAKABEAAAAJAAcAAAAKABEAAAAJAAgAAAAKABEAAAAEAAQAAAAKABEAAAAEAAUAAAAKABEAAAAFAAUAAAAKABEAAAAFAAQAAAAKABEAAAADAAUAAAAKABEAAAAGAAUAAAAKABEAAAA=")
+
+[node name="Player" parent="." index="1"]
+position = Vector2(64, 112)
+
+[node name="GreenGoal" parent="Goals" index="0" instance=ExtResource("2_w2cyl")]
+position = Vector2(32, 32)
+
+[node name="RedGoal" parent="Goals" index="1" instance=ExtResource("2_w2cyl")]
+position = Vector2(112, 32)
+goal_type = 1
+
+[node name="GreenBox" parent="Boxes" index="0" instance=ExtResource("3_7ah0u")]
+position = Vector2(112, 80)
+
+[node name="RedBox" parent="Boxes" index="1" instance=ExtResource("3_7ah0u")]
+position = Vector2(32, 80)
+box_type = 1

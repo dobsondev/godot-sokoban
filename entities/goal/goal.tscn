@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cv4nb8std5bfl"]
+[gd_scene load_steps=7 format=3 uid="uid://cv4nb8std5bfl"]
 
 [ext_resource type="Script" path="res://entities/goal/goal.gd" id="1_72dx8"]
 [ext_resource type="Texture2D" uid="uid://bugryflgk0olr" path="res://assets/aseprite/green_goal.png" id="2_edibt"]
 [ext_resource type="Texture2D" uid="uid://nnaq58galcgp" path="res://assets/aseprite/red_goal.png" id="3_wvx57"]
+[ext_resource type="AudioStream" uid="uid://d1ainan7r80lu" path="res://assets/sfx/goal.wav" id="4_0p7hs"]
+[ext_resource type="AudioStream" uid="uid://ds8tig4nwjwm0" path="res://assets/sfx/goal2.wav" id="5_xnt44"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bexpn"]
 size = Vector2(14, 14)
@@ -23,3 +25,9 @@ centered = false
 visible = false
 texture = ExtResource("3_wvx57")
 centered = false
+
+[node name="GreenGoalSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0p7hs")
+
+[node name="RedGoalSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_xnt44")

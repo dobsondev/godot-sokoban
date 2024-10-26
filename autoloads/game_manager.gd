@@ -4,8 +4,8 @@ var levels_status: Dictionary
 
 # Need to use _ready() rather than just ready() for autoloads
 func _ready() -> void:
-	for key in Globals.levels:
-		levels_status[key] = { "beat": false, "moves": 0 }
+	for level in Globals.LEVELS:
+		levels_status[level] = { "beat": false, "moves": 0 }
 
 func beat_level(levelKey: String, moves: int):
 	levels_status[levelKey] = { "beat": true, "moves": moves }

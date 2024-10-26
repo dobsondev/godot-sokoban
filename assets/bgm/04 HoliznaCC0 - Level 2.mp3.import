@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bb1pe0sat7kmi"
+path="res://.godot/imported/04 HoliznaCC0 - Level 2.mp3-c4478d3d0dea18cd7e9a7920b60c0013.mp3str"
+
+[deps]
+
+source_file="res://assets/bgm/04 HoliznaCC0 - Level 2.mp3"
+dest_files=["res://.godot/imported/04 HoliznaCC0 - Level 2.mp3-c4478d3d0dea18cd7e9a7920b60c0013.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

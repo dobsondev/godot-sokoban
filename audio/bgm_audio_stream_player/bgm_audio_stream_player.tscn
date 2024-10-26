@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvv3efa12n4ce"]
+
+[ext_resource type="AudioStream" uid="uid://bb1pe0sat7kmi" path="res://assets/bgm/04 HoliznaCC0 - Level 2.mp3" id="1_6dyca"]
+
+[node name="BGMAudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_6dyca")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true

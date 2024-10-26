@@ -13,6 +13,7 @@ func add_crown_sprite() -> void:
 	var crown_sprite = Sprite2D.new()
 	var texture = load("res://assets/aseprite/crown.png") as Texture2D
 	crown_sprite.texture = texture
+	crown_sprite.offset = Vector2(5.0, -2.0)
 	self.add_child(crown_sprite)
 
 func _on_level_button_pressed():

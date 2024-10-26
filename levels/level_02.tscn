@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=4 uid="uid://o63un56sat0x"]
+[gd_scene load_steps=5 format=4 uid="uid://o63un56sat0x"]
 
 [ext_resource type="PackedScene" uid="uid://c7kia136qg64b" path="res://levels/level.tscn" id="1_jgrc2"]
 [ext_resource type="PackedScene" uid="uid://cv4nb8std5bfl" path="res://entities/goal/goal.tscn" id="2_0kitj"]
+[ext_resource type="PackedScene" uid="uid://c0g7op76o124" path="res://levels/level_03.tscn" id="2_mi2qs"]
 [ext_resource type="PackedScene" uid="uid://dkakjlc5e3o62" path="res://entities/box/box.tscn" id="3_tok57"]
 
-[node name="LevelTwo" instance=ExtResource("1_jgrc2")]
+[node name="Level02" instance=ExtResource("1_jgrc2")]
 level_key = "02"
+next_level = ExtResource("2_mi2qs")
 
 [node name="TileMapLayer" parent="." index="0"]
 tile_map_data = PackedByteArray("AAAAAAAAAAAKABEAAAABAAAAAAAKABEAAAACAAAAAAAKABEAAAADAAAAAAAKABEAAAAEAAAAAAAKABEAAAAFAAAAAAAKABEAAAAGAAAAAAAKABEAAAAHAAAAAAAKABEAAAAIAAAAAAAKABEAAAAJAAAAAAAKABEAAAAJAAEAAAAKABEAAAAJAAIAAAAKABEAAAAJAAMAAAAKABEAAAAJAAQAAAAKABEAAAAJAAUAAAAKABEAAAAJAAYAAAAKABEAAAAJAAcAAAAKABEAAAAJAAgAAAAKABEAAAAAAAgAAAAKABEAAAAAAAcAAAAKABEAAAAAAAYAAAAKABEAAAAAAAUAAAAKABEAAAAAAAQAAAAKABEAAAAAAAMAAAAKABEAAAAAAAIAAAAKABEAAAAAAAEAAAAKABEAAAAAAAkAAAAKABEAAAABAAkAAAAKABEAAAACAAkAAAAKABEAAAADAAkAAAAKABEAAAAEAAkAAAAKABEAAAAFAAkAAAAKABEAAAAGAAkAAAAKABEAAAAHAAkAAAAKABEAAAAIAAkAAAAKABEAAAAJAAkAAAAKABEAAAAIAAUAAAAKABEAAAAIAAQAAAAKABEAAAAHAAQAAAAKABEAAAAHAAUAAAAKABEAAAAGAAQAAAAKABEAAAAFAAQAAAAKABEAAAAIAAEAAAAKABEAAAABAAEAAAAKABEAAAABAAgAAAAKABEAAAA=")
@@ -18,6 +20,3 @@ position = Vector2(112, 48)
 
 [node name="Box" parent="Boxes" index="0" instance=ExtResource("3_tok57")]
 position = Vector2(96, 96)
-
-[node name="ColorRect" parent="LevelCleared" index="0"]
-color = Color(0.290196, 0.329412, 0.207843, 1)

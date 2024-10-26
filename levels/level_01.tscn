@@ -1,26 +1,56 @@
-[gd_scene load_steps=5 format=4 uid="uid://ct4xifc6mrfm1"]
+[gd_scene load_steps=7 format=4 uid="uid://ct4xifc6mrfm1"]
 
 [ext_resource type="PackedScene" uid="uid://c7kia136qg64b" path="res://levels/level.tscn" id="1_swgyc"]
 [ext_resource type="PackedScene" uid="uid://o63un56sat0x" path="res://levels/level_02.tscn" id="2_7tv4p"]
+[ext_resource type="Texture2D" uid="uid://cidcbbobqag67" path="res://assets/aseprite/level_one_tutorial.png" id="3_6rsjp"]
 [ext_resource type="PackedScene" uid="uid://dkakjlc5e3o62" path="res://entities/box/box.tscn" id="4_1qwgp"]
+[ext_resource type="Theme" uid="uid://drr70ylap357l" path="res://ui/theme/custom_theme.tres" id="5_lcdmc"]
 [ext_resource type="PackedScene" uid="uid://cv4nb8std5bfl" path="res://entities/goal/goal.tscn" id="5_y34sk"]
 
-[node name="Level" instance=ExtResource("1_swgyc")]
+[node name="Level01" instance=ExtResource("1_swgyc")]
 next_level = ExtResource("2_7tv4p")
 
 [node name="TileMapLayer" parent="." index="0"]
 tile_map_data = PackedByteArray("AAAAAAAAAAAKABEAAAAAAAEAAAAKABEAAAAAAAIAAAAKABEAAAAAAAMAAAAKABEAAAAAAAQAAAAKABEAAAAAAAYAAAAKABEAAAAAAAcAAAAKABEAAAAAAAgAAAAKABEAAAAAAAkAAAAKABEAAAAAAAUAAAAKABEAAAABAAAAAAAKABEAAAACAAAAAAAKABEAAAADAAAAAAAKABEAAAAEAAAAAAAKABEAAAAFAAAAAAAKABEAAAAGAAAAAAAKABEAAAAHAAAAAAAKABEAAAAIAAAAAAAKABEAAAAJAAAAAAAKABEAAAAJAAEAAAAKABEAAAAJAAIAAAAKABEAAAAJAAMAAAAKABEAAAAJAAQAAAAKABEAAAAJAAUAAAAKABEAAAAJAAYAAAAKABEAAAAJAAcAAAAKABEAAAAJAAgAAAAKABEAAAABAAkAAAAKABEAAAACAAkAAAAKABEAAAADAAkAAAAKABEAAAAEAAkAAAAKABEAAAAFAAkAAAAKABEAAAAGAAkAAAAKABEAAAAHAAkAAAAKABEAAAAIAAkAAAAKABEAAAAJAAkAAAAKABEAAAAIAAEAAAAKABEAAAABAAEAAAAKABEAAAABAAgAAAAKABEAAAAIAAgAAAAKABEAAAA=")
 
-[node name="Player" parent="." index="1"]
+[node name="Tutorial" type="Node2D" parent="." index="1"]
+position = Vector2(80, 80)
+
+[node name="TutorialSprite" type="Sprite2D" parent="Tutorial" index="0"]
+texture = ExtResource("3_6rsjp")
+
+[node name="Movement" type="RichTextLabel" parent="Tutorial" index="1"]
+offset_left = -48.0
+offset_top = -24.0
+offset_right = -13.0
+offset_bottom = -13.0
+theme = ExtResource("5_lcdmc")
+text = "To Move"
+
+[node name="Restart" type="RichTextLabel" parent="Tutorial" index="2"]
+offset_left = 28.0
+offset_top = -27.0
+offset_right = 54.0
+offset_bottom = -5.0
+theme = ExtResource("5_lcdmc")
+text = "Retry
+Level"
+
+[node name="Objective" type="RichTextLabel" parent="Tutorial" index="3"]
+offset_left = -56.0
+offset_top = 36.0
+offset_right = 67.0
+offset_bottom = 47.0
+theme = ExtResource("5_lcdmc")
+text = "Push Your Brothers to Bed!"
+
+[node name="Player" parent="." index="2"]
 position = Vector2(32, 80)
 
 [node name="Goal" parent="Goals" index="0" instance=ExtResource("5_y34sk")]
-position = Vector2(112, 64)
+position = Vector2(112, 96)
 goal_type = 1
 
 [node name="Box" parent="Boxes" index="0" instance=ExtResource("4_1qwgp")]
 position = Vector2(48, 80)
 box_type = 1
-
-[node name="ColorRect" parent="LevelCleared" index="0"]
-color = Color(0.290196, 0.329412, 0.207843, 1)

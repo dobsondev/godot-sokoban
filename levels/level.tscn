@@ -47,8 +47,15 @@ offset_right = 144.0
 offset_bottom = 48.0
 text = "Moves Made: 0"
 
+[node name="Menu" type="RichTextLabel" parent="LevelCleared/ColorRect"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 144.0
+offset_right = 144.0
+offset_bottom = 160.0
+text = "Press M to Return to the Menu"
+
 [node name="NextLevel" type="RichTextLabel" parent="LevelCleared/ColorRect"]
-visible = false
 layout_mode = 0
 offset_left = 16.0
 offset_top = 112.0
